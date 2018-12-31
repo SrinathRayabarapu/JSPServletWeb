@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JspServletWebTest</display-name>
+  
+	<welcome-file-list>
+	    <welcome-file>index.html</welcome-file>
+	    <welcome-file>index.htm</welcome-file>
+	    <welcome-file>index.jsp</welcome-file>
+	    <welcome-file>default.html</welcome-file>
+	    <welcome-file>default.htm</welcome-file>
+	    <welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+<!-- Servlet names and classes   -->
+	<servlet>
+		<servlet-name>frontcontroller</servlet-name>
+		<servlet-class>controller.FrontController</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>sessionTracking</servlet-name>
+		<servlet-class>com.controller.SessionTracking</servlet-class>
+	</servlet>
+	
+	<servlet>
+	   <servlet-name>login</servlet-name>
+	   <servlet-class>com.proj.login.Login</servlet-class>
+	</servlet>
+	
+	<servlet>
+	  	<servlet-name>controller</servlet-name>
+	  	<servlet-class>com.controlpack.ActionServlet</servlet-class>
+  	</servlet>
+
+<!--  Servlet names and url patterns  -->	
+	<servlet-mapping>
+		<servlet-name>frontcontroller</servlet-name>
+		<url-pattern>/fcontrl</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>sessionTracking</servlet-name>
+		<url-pattern>/sesstrack</url-pattern>
+	</servlet-mapping>
+  
+	<servlet-mapping>
+	    <servlet-name>login</servlet-name>
+	    <url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+	  	<servlet-name>controller</servlet-name>
+	  	<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+</web-app>
